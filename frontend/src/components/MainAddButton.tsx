@@ -19,8 +19,8 @@ const MainAddButton = () => {
 
       if (currentScrollY > lastScrollY && currentScrollY > 20) {
         setIsVisible(false);
-        setIsExpanded(false); // Collapse when scrolling down
-        setIsRotated(false); // Reset rotation when scrolling down
+        setIsExpanded(false);
+        setIsRotated(false);
       } else if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       }

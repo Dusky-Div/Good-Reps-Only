@@ -1,33 +1,22 @@
 import CardLong from "./components/CardLong";
-import FourDots from "/assets/FourDots.svg";
 import CardRect from "./components/CardRect";
-import { motion } from "framer-motion";
 import MainAddButton from "./components/MainAddButton";
 import Footer from "./components/Footer";
+import HomeMenuButton from "./components/HomeMenuButton";
 
 function App() {
   return (
     <>
       <div className="flex flex-col bg-[#0A0A0A] mx-auto w-svw max-w-[420px] min-h-svh p-2 gap-1">
-        <div className="relative flex w-full h-fit mt-4 text-white font-medium text-3xl justify-between">
+        <div className="relative flex w-full h-fit mt-4 text-white font-medium text-3xl items-center justify-between">
           <div className="flex">
             Good Reps
             <br />
             Only
           </div>
-          <motion.div
-            animate={{ rotate: [0, 360] }}
-            transition={{
-              repeat: Infinity,
-              duration: 10,
-              ease: "linear",
-            }}
-            className="flex w-16 h-16 mr-4 bg-[#242424] self-center rounded-full items-center justify-center"
-          >
-            <img src={FourDots} className="filter invert w-8 h-8" />
-          </motion.div>
+          <HomeMenuButton />
         </div>
-        <div className="flex text-white text-4xl font- mt-10 self-center">
+        <div className="flex text-white text-3xl mt-10 self-center">
           <span>Track</span>
           <span className="text-red-600 mr-1 font-semibold">.</span>
           <span>Smash</span>
