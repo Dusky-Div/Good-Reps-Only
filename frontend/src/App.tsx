@@ -40,20 +40,19 @@ function App() {
         </div>
         <div className="flex flex-row gap-1">
           <CardLong
-            color="bg-[#ED6B3E]"
+            color="bg-[#7678ed]"
             rounded="rounded-bl-[3rem] rounded-tr-[3rem] rounded-br-[3rem]"
             title="Today"
-            textColor="text-[#401100]"
-            heartBg="bg-[#D15D35]"
-            heartOut="text-[#401100]"
-            heartFill="#401100"
+            textColor="text-[#161635]"
+            heartBg="bg-[#6E70E4]"
+            heartOut="text-[#161635]"
+            heartFill="#161635"
           />
           <CardLong
             color="bg-[#F7D44C]"
-            round="rounded-[3rem]"
+            rounded="rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem]"
             title="Yesterday"
             textColor="text-[#392E00]"
-            rounded="rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem]"
             heartBg="bg-[#E8C748]"
             heartOut="text-[#392E00]"
             heartFill="#392E00"
@@ -67,7 +66,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -76,7 +78,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -85,7 +90,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -94,7 +102,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -103,7 +114,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -112,7 +126,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -121,7 +138,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -130,7 +150,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
           <CardRect
             color="bg-[#F6EBC9]"
@@ -139,16 +162,10 @@ function App() {
             textColor="text-[#000]"
             rounded="rounded-[3rem]"
             split="PPL"
-            splitTextColor="text-[#7C714D]"
-          />
-          <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
-            title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
-            split="PPL"
-            splitTextColor="text-[#7C714D]"
+            splitTextColor="text-[#6C6346]"
+            heartBg="bg-[#E0D5B3]"
+            heartOut="text-[#6C6346]"
+            heartFill="#6C6346"
           />
         </div>
         <MainAddButton />

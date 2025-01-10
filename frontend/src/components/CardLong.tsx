@@ -1,6 +1,7 @@
 import { Heart } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import CardOptionButton from "./CardOptionButton";
 
 const CardLong = ({
   color,
@@ -19,8 +20,9 @@ const CardLong = ({
 
   return (
     <div
-      className={`w-1/2 h-72 p-3 ${color} bg-[url(./assets/YellowCardSquiggle.svg)] ${rounded}`}
+      className={`relative w-1/2 h-72 p-3 ${color} bg-[url(./assets/YellowCardSquiggle.svg)] ${rounded}`}
     >
+      <CardOptionButton color="bg-[#202020]" />
       <div className="flex justify-between items-center mt-3">
         <div className={`flex font-bold text-xl ${textColor} w-7/12`}>
           {title}
