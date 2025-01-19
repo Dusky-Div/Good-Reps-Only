@@ -33,7 +33,7 @@ const MainAddButton = () => {
   }, [lastScrollY]);
 
   return (
-    <motion.div
+    <motion.button
       id="addButtonBG"
       className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[108px] bg-gray-900/10 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 ${
         isVisible ? "opacity-100" : "opacity-0 translate-y-60"
@@ -63,7 +63,7 @@ const MainAddButton = () => {
         </motion.div>
       )}
 
-      <motion.div
+      <motion.button
         className={`absolute bottom-[6px] w-24 h-24 rounded-full text-white flex items-center justify-center ${
           isExpanded ? "bg-red-600" : "bg-black"
         }`}
@@ -79,8 +79,8 @@ const MainAddButton = () => {
         onClick={handlePlusButtonClick}
       >
         <Plus size={36} strokeWidth={2.2} />
-      </motion.div>
-    </motion.div>
+      </motion.button>
+    </motion.button>
   );
 };
 

@@ -1,7 +1,8 @@
 import FourDots from "/assets/FourDots.svg";
-import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import HomeMenuItem from "./HomeMenuItem";
+import { useNavigate } from "react-router-dom";
 
 const HomeMenuButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,11 @@ const HomeMenuButton = () => {
     };
   }, [isOpen]);
 
+  const navigate = useNavigate();
+
   return (
-    <motion.div className="flex absolute right-4 w-fit h-fit items-center justify-center">
-      <motion.div
+    <div className="flex absolute right-4 w-fit h-fit items-center justify-center">
+      <button
         className={`button flex w-16 h-16 z-50 rounded-full items-center justify-center ${
           isOpen ? "bg-white" : "bg-[#242424]"
         }`}
@@ -35,68 +38,38 @@ const HomeMenuButton = () => {
         ) : (
           <img src={FourDots} className="filter invert w-8 h-8" />
         )}
-      </motion.div>
+      </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="flex absolute z-40 -top-7 -right-6 w-svw max-w-[420px] min-h-svh bg-black"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={() => setIsOpen(false)}
+      {isOpen && (
+        <div
+          className="flex absolute z-40 -top-7 -right-6 w-svw max-w-[420px] min-h-svh bg-black"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {isOpen && (
+        <div className="flex absolute h-fit w-fit right-0 top-20 z-40 flex-col gap-1">
+          <HomeMenuItem
+            title="My Splits"
+            onClick={() => {
+              navigate("/my-splits");
+            }}
           />
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="flex absolute h-fit w-fit right-0 top-20 z-40 flex-col gap-1"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{
-              opacity: 1,
-              y: 0,
+          <HomeMenuItem
+            title="My PRs"
+            onClick={() => {
+              navigate("/my-prs");
             }}
-            exit={{
-              opacity: 0,
-              y: 20,
-              transition: { duration: 0.2 },
+          />
+          <HomeMenuItem
+            title="PR Analytics"
+            onClick={() => {
+              navigate("/pr-analytics");
             }}
-            transition={{
-              duration: 0.2,
-              ease: "easeOut",
-            }}
-          >
-            {["My Splits", "My PRs", "PR Analytics", "Settings"].map(
-              (text, index) => (
-                <motion.div
-                  key={index}
-                  className="component flex w-52 h-fit px-6 py-4 font-medium text-lg bg-[#242424] rounded-lg"
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: 20,
-                    transition: { duration: 0.3 },
-                  }}
-                  transition={{
-                    delay: index * 0.04,
-                    duration: 0.3,
-                    ease: "easeOut",
-                  }}
-                >
-                  {text}
-                </motion.div>
-              )
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+          />
+        </div>
+      )}
+    </div>
   );
 };
 
