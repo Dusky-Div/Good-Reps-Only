@@ -35,8 +35,8 @@ const MainAddButton = () => {
   return (
     <motion.button
       id="addButtonBG"
-      className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[108px] bg-gray-900/10 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0 translate-y-60"
+      className={`fixed z-40 bottom-4 left-1/2 transform -translate-x-1/2 w-[108px] bg-gray-900/10 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 ${
+        isVisible ? "opacity-100" : "opacity-0 translate-y-40"
       }`}
       animate={{
         height: isExpanded ? 328 : 108,

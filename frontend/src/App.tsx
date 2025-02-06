@@ -3,6 +3,8 @@ import CardRect from "./components/CardRect";
 import MainAddButton from "./components/MainAddButton";
 import Footer from "./components/Footer";
 import HomeMenuButton from "./components/HomeMenuButton";
+import BottomNav from "./components/BottomNav";
+import { AuroraText } from "./components/aurora-text";
 
 function App() {
   return (
@@ -158,6 +160,7 @@ function App() {
           />
         </div>
         <MainAddButton />
+        <BottomNav />
       </div>
       <Footer />
     </>
