@@ -9,11 +9,14 @@ const MySplits = () => {
   return (
     <div className="container flex flex-col bg-[#0A0A0A] mx-auto w-svw max-w-[420px] min-h-svh p-2 gap-1">
       <div className="flex mt-4 text-3xl text-white font- items-center gap-3">
-        <div className="flex w-16 h-16 bg-[#242424] rounded-full items-center justify-center">
-          <button onClick={() => navigate("/")}>
+        <button
+          className="flex w-16 h-16 bg-[#242424] rounded-full items-center justify-center"
+          onClick={() => navigate("/")}
+        >
+          <button>
             <ChevronLeft className="w-7 h-7" />
           </button>
-        </div>
+        </button>
         <p>My Splits</p>
       </div>
       <div className="flex text-lg py-8 px-6 mt-4 w-96 self-center flex-col text-[#152607] bg-[#D0E9BC] rounded-3xl">
