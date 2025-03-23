@@ -1,4 +1,3 @@
-import Map from "@/components/Map";
 import { ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -17,10 +16,13 @@ const Heatmap = () => {
         </button>
         <p>Streak Heatmap</p>
       </div>
-      <div className="flex text-lg py-8 px-6 mt-4 w-96 self-center gap-1 text-[#152607] bg-[#282828] rounded-3xl">
-        <Map />
-        <Map />
-        <Map />
+      <div className="flex text-lg flex-col p-6 mt-4 w-96 self-center gap-3 text-white bg-[#282828] rounded-3xl">
+        <p className="font-medium text-center">
+          Hit the gym today? Keep the streak alive and make it count!
+        </p>
+        <button className="flex rounded-full  bg-white p-3 w-fit h-fit self-center items-center justify-center">
+          <img className="w-10" src="../assets/f.png" alt="" />
+        </button>
       </div>
     </div>
   );

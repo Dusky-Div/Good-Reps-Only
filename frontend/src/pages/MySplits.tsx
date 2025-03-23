@@ -1,8 +1,8 @@
 import { ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
+import Button from "../components/atoms/Button";
 import { useState } from "react";
-import AddSplit from "../components/AddSplit";
+import AddSplit from "../components/templates/AddSplit";
 const MySplits = () => {
   const [isNotAdded, setIsNotAdded] = useState(false);
   const navigate = useNavigate();

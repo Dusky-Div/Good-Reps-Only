@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { CalendarSync, Plus } from "lucide-react";
-import CloseButton from "./atoms/CloseButton";
+import CloseButton from "../atoms/CloseButton";
 import { FaDumbbell } from "react-icons/fa6";
-import AddSetExButton from "./atoms/AddSetExButton";
-import ExerciseInputCard from "./templates/ExerciseInputCard";
+import AddSetExButton from "../atoms/AddSetExButton";
+import ExerciseInputCard from "./ExerciseInputCard";
 
 const AddSplit = ({ isNotAdded, setIsNotAdded }: any) => {
   const [exercises, setExercises] = useState<number[]>([]); // Track exercise indexes

@@ -1,10 +1,10 @@
-import CardLong from "./components/CardLong";
-import CardRect from "./components/CardRect";
-import MainAddButton from "./components/MainAddButton";
-import Footer from "./components/Footer";
-import HomeMenuButton from "./components/HomeMenuButton";
-import BottomNav from "./components/BottomNav";
-import { AuroraText } from "./components/aurora-text";
+import CardLong from "./components/organisms/CardLong";
+import CardRect from "./components/organisms/CardRect";
+import MainAddButton from "./components/atoms/MainAddButton";
+import Footer from "./components/templates/Footer";
+import HomeMenuButton from "./components/atoms/HomeMenuButton";
+import BottomNav from "./components/organisms/BottomNav";
+import { AuroraText } from "./components/atoms/aurora-text";
 
 function App() {
   return (

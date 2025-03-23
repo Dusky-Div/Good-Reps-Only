@@ -1,7 +1,7 @@
 import { Heart } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import CardOptionButton from "./CardOptionButton";
+import CardOptionButton from "../atoms/CardOptionButton";
 
 const CardLong = ({
   color,

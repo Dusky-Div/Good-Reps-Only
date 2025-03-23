@@ -1,7 +1,7 @@
 import FourDots from "/assets/FourDots.svg";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import HomeMenuItem from "./HomeMenuItem";
+import HomeMenuItem from "../molecules/HomeMenuItem";
 import { useNavigate } from "react-router-dom";
 
 const HomeMenuButton = () => {
