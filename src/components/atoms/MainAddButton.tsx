@@ -63,7 +63,7 @@ const MainAddButton = () => {
         </motion.div>
       )}
 
-      <motion.button
+      <motion.div
         className={`absolute bottom-[6px] w-24 h-24 rounded-full text-white flex items-center justify-center ${
           isExpanded ? "bg-red-600" : "bg-black"
         }`}
@@ -79,7 +79,7 @@ const MainAddButton = () => {
         onClick={handlePlusButtonClick}
       >
         <Plus size={36} strokeWidth={2.2} />
-      </motion.button>
+      </motion.div>
     </motion.button>
   );
 };
