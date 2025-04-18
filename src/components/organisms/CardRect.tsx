@@ -25,8 +25,12 @@ const CardRect = ({
       className={`relative w-full h-28 px-6 ${color} ${rounded} flex justify-between items-center`}
     >
       <div className="flex flex-col w-fit my-auto">
-        <div className={`font-bold text-[22px] ${textColor}`}>{title}</div>
-        <div className={`font-bold text-[18px] ${splitTextColor}`}>{split}</div>
+        <div className={`font-bold font-lufga text-[22px] ${textColor}`}>
+          {title}
+        </div>
+        <div className={`font-bold font-lufga text-[18px] ${splitTextColor}`}>
+          {split}
+        </div>
         <CardOptionButton color="bg-[#000]" />
       </div>
       <div

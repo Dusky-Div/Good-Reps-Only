@@ -4,13 +4,12 @@ import MainAddButton from "./components/atoms/MainAddButton";
 import Footer from "./components/templates/Footer";
 import HomeMenuButton from "./components/atoms/HomeMenuButton";
 import BottomNav from "./components/organisms/BottomNav";
-import { AuroraText } from "./components/atoms/aurora-text";
 
 function App() {
   return (
     <>
       <div className="flex flex-col bg-[#0A0A0A] mx-auto w-svw max-w-[420px] min-h-svh p-2 gap-1">
-        <div className="relative flex w-full h-fit mt-4 text-white font-medium text-3xl items-center justify-between">
+        <div className="relative flex w-full h-fit mt-4 text-white font-lufga font-medium text-3xl items-center justify-between">
           <div className="flex">
             Good Reps
             <br />
@@ -18,15 +17,15 @@ function App() {
           </div>
           <HomeMenuButton />
         </div>
-        <div className="flex text-white text-3xl mt-10 self-center">
+        <div className="flex text-white font-lufga font-medium text-3xl mt-10 self-center">
           <span>Track</span>
-          <span className="text-red-600 mr-1 font-semibold">.</span>
+          <span className="text-red-600 mr-1">.</span>
           <span>Smash</span>
-          <span className="text-red-600 mr-1 font-semibold">.</span>
+          <span className="text-red-600 mr-1">.</span>
           <span>Repeat</span>
-          <span className="text-red-600 font-semibold">.</span>
+          <span className="text-red-600">.</span>
         </div>
-        <div className="flex mb-10 w-[22rem] text-xl self-center text-center text-[#8F8F8F]">
+        <div className="flex mb-10 w-[22rem] font-light text-xl self-center text-center text-[#8F8F8F]">
           Manage your split, track your PRs, fuel your progress.
         </div>
         <div className="flex flex-row gap-1">

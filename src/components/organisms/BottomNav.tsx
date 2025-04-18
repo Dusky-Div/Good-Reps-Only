@@ -31,17 +31,22 @@ const BottomNav = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-80"
       }`}
     >
-      <div
-        className="h-fit p-1 bg-gray-900/10 backdrop-blur-sm rounded-2xl flex gap-3 items-center justify-around"
-        onClick={() => {
-          navigate("/my-splits");
-        }}
-      >
-        <button className="flex flex-col items-center justify-center w-14 h-14 p-1 bg-white text-[#242424] rounded-2xl text-xs gap-1">
+      <div className="h-fit p-1 bg-gray-900/10 backdrop-blur-sm rounded-2xl flex gap-3 items-center justify-around">
+        <button
+          onClick={() => {
+            navigate("/my-splits");
+          }}
+          className="flex flex-col items-center justify-center w-14 h-14 p-1 bg-white text-[#242424] rounded-2xl text-xs gap-1"
+        >
           <Dumbbell className="w-5 h-5" />
           Splits
         </button>
-        <button className="flex flex-col items-center justify-center w-14 h-14 p-1 bg-white text-[#242424] rounded-2xl text-xs gap-1">
+        <button
+          onClick={() => {
+            navigate("/log-pr");
+          }}
+          className="flex flex-col items-center justify-center w-14 h-14 p-1 bg-white text-[#242424] rounded-2xl text-xs gap-1"
+        >
           <CalendarSync className="w-5 h-5" />
           PRs
         </button>

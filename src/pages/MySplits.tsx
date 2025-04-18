@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/atoms/Button";
 import { useState } from "react";
 import AddSplit from "../components/templates/AddSplit";
-import SplitInfoCard from "@/components/atoms/SplitInfoCard";
 import SplitList from "@/components/templates/SplitList";
 import LogWorkout from "@/components/templates/LogWorkout";
 const MySplits = () => {
@@ -15,15 +14,27 @@ const MySplits = () => {
       <div className="flex mt-4 text-3xl text-white font- items-center gap-3">
         <button
           className="flex w-16 h-16 bg-[#242424] rounded-full items-center justify-center"
-          onClick={() => navigate("/")}
+          onClick={() => window.history.back()}
         >
           <button>
             <ChevronLeft className="w-7 h-7" />
           </button>
         </button>
-        <p>My Splits</p>
+        <p className="font-lufga">My Splits</p>
       </div>
-      <SplitInfoCard />
+      <div className="flex text-lg py-8 px-6 mt-4 w-96 self-center flex-col text-white border border-orange-500 bg-[#553d0d] rounded-3xl">
+        <span className="leading-7 font-normal text-2xl">
+          <span className="">Create</span>
+          <span> and </span>
+          <span className="">manage</span>
+          <span> your splits specifying exercises and goals for </span>
+          <span className="">each day of the week</span>
+
+          <span className="font-semibold leading-7 text-2xl text-red-600">
+            .
+          </span>
+        </span>
+      </div>
       <div className="flex text-lg w-96 p-6 self-center rounded-3xl justify-around">
         <div className="">
           <span className="text-xs text-[#0A0A0A] select-none">

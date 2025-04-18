@@ -24,7 +24,9 @@ const CardLong = ({
     >
       <CardOptionButton color="bg-[#202020]" />
       <div className="flex justify-between items-center mt-3">
-        <div className={`flex font-bold text-xl ${textColor} w-7/12`}>
+        <div
+          className={`flex font-lufga font-bold text-xl ${textColor} w-7/12`}
+        >
           {title}
         </div>
         <div
