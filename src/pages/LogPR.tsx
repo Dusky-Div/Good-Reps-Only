@@ -1,7 +1,9 @@
 import PRInputCard from "@/components/templates/PRInputCard";
 import PRList from "@/components/templates/PRList";
 import { ChevronLeft, Plus } from "lucide-react";
+import { useState } from "react";
 const LogPR = () => {
+  const [PRInputOpen, setPRInputOpen] = useState(false);
   return (
     <div className="container flex flex-col bg-[#0A0A0A] mx-auto w-svw max-w-[420px] min-h-svh p-2 gap-1">
       <div className="flex mt-4 text-3xl text-white font- items-center gap-3">
@@ -24,14 +26,21 @@ const LogPR = () => {
             Your PR deserves a spot in the log.
           </span>
         </div>
-        <button className="flex w-16 h-16 text-white border self-center justify-center items-center border-[#323236] bg-[#242428] rounded-3xl">
+        <button
+          onClick={() => setPRInputOpen((prev) => !prev)}
+          className="flex w-16 h-16 text-white border self-center justify-center items-center border-[#323236] bg-[#242428] rounded-3xl"
+        >
           <Plus className="w-7 h-7" />
         </button>
       </div>
-      <div className="flex flex-col w-full h-fit mb-2 py-4 px-6 text-white">
-        <PRInputCard />
-      </div>
-      <hr className="w-10/12 self-center border-t border-[#3a3a3d]" />
+      {PRInputOpen && (
+        <div className="flex flex-col">
+          <div className="flex flex-col w-full h-fit mb-2 py-4 px-6 text-white">
+            <PRInputCard setPRInputOpen={setPRInputOpen} />
+          </div>
+          <hr className="w-10/12 self-center border-t border-[#3a3a3d]" />
+        </div>
+      )}
 
       <PRList />
     </div>

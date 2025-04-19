@@ -3,9 +3,11 @@ import KgRepInput from "../atoms/KgRepInput";
 import { Datepicker } from "flowbite-react";
 import { Check } from "lucide-react";
 
-interface PRInputCardProps {}
+interface PRInputCardProps {
+  setPRInputOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const PRInputCard: React.FC<PRInputCardProps> = ({}) => {
+const PRInputCard: React.FC<PRInputCardProps> = ({ setPRInputOpen }) => {
   return (
     <div className="flex flex-col w-full h-full py-4">
       <div className="flex justify-center mb-4">
@@ -44,7 +46,10 @@ const PRInputCard: React.FC<PRInputCardProps> = ({}) => {
               color: "white",
             }}
           />
-          <button className="flex w-fit h-fit p-4 text-white self-center justify-center items-center bg-[#1f7fba] rounded-[20px]">
+          <button
+            onClick={() => setPRInputOpen((prev) => !prev)}
+            className="flex w-fit h-fit p-4 text-white self-center justify-center items-center bg-[#1f7fba] rounded-[20px]"
+          >
             <p className="text-lg font-medium">
               <Check className="w-6 h-6" />
             </p>
