@@ -28,8 +28,9 @@ const LogPR = () => {
         </div>
         <button
           onClick={() => setPRInputOpen((prev) => !prev)}
-          className="flex w-16 h-16 text-white border self-center justify-center items-center border-[#323236] bg-[#242428] rounded-3xl"
+          className="flex relative w-16 h-16 text-white border self-center justify-center items-center border-[#323236] bg-[#242428] rounded-3xl"
         >
+          <div className="absolute inset-4 bg-white/30 rounded-full blur-md"></div>
           <Plus className="w-7 h-7" />
         </button>
       </div>
