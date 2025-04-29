@@ -21,17 +21,17 @@ const LogPR = () => {
         <div className="flex items-center justify-start text-lg py-4 px-5 w-fit self-center text-white border border-[#323236] bg-[#242428] rounded-3xl h-fit">
           <span className="flex flex-col font-extralight text-base leading-5">
             <span className="font-medium font-lufga text-2xl">
-              Hit a new high?
+              Hit a new high<span className="text-[#ff7300]">?</span>
             </span>
             Your PR deserves a spot in the log.
           </span>
         </div>
         <button
           onClick={() => setPRInputOpen((prev) => !prev)}
-          className="flex relative w-16 h-16 text-white border self-center justify-center items-center border-[#323236] bg-[#242428] rounded-3xl"
+          className="flex relative w-16 h-16 text-[#000000] border self-center justify-center items-center border-[#7a7a7a] bg-[#e8e8e7] rounded-3xl"
         >
-          <div className="absolute inset-4 bg-white/30 rounded-full blur-md"></div>
-          <Plus className="w-7 h-7" />
+          {/* <div className="absolute inset-4 bg-white/30 rounded-full blur-md"></div> */}
+          <Plus className="w-7 h-7" strokeWidth={2.3} />
         </button>
       </div>
       {PRInputOpen && (
