@@ -31,7 +31,7 @@ const BottomNav = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-80"
       }`}
     >
-      <div className="h-fit p-1 bg-gray-900/10 backdrop-blur-sm rounded-2xl flex gap-3 items-center justify-around">
+      <div className="h-fit p-1 bg-[#e7e7e7]/20 backdrop-blur-sm rounded-2xl flex gap-3 items-center justify-around">
         <button
           onClick={() => {
             navigate("/my-splits");
@@ -51,7 +51,7 @@ const BottomNav = () => {
           PRs
         </button>
       </div>
-      <div className="h-fit p-1 bg-gray-900/10 backdrop-blur-sm rounded-2xl flex gap-3 items-center justify-around">
+      <div className="h-fit p-1  bg-[#e7e7e7]/20  backdrop-blur-sm rounded-2xl flex gap-3 items-center justify-around">
         <button className="flex flex-col items-center justify-center w-14 h-14 p-1 bg-white text-[#242424] rounded-2xl text-xs gap-1">
           <ChartLine className="w-5 h-5" />
           Stats

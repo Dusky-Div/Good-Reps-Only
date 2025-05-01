@@ -15,7 +15,9 @@ const SignUp = () => {
         return user;
       })
       .catch((error) => {
-        throw error;
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Error signing in:", errorCode, errorMessage);
       });
   };
 

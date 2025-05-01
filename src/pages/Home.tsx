@@ -5,39 +5,44 @@ import Footer from "../components/templates/Footer";
 import HomeMenuButton from "../components/atoms/HomeMenuButton";
 import BottomNav from "../components/organisms/BottomNav";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../firebase/AuthContext";
+import BottomNavigation from "@/components/organisms/BottomNavigation";
 function Home() {
+  const { user } = useAuth();
   const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col bg-[#0A0A0A] mx-auto w-svw max-w-[420px] min-h-svh p-2 gap-1">
-        <div className="relative flex w-full h-fit mt-4 text-white font-lufga font-medium text-3xl items-center justify-between">
-          <div className="flex">
+        <div className="relative flex w-full h-fit mt-4 text-white font-medium text-3xl items-center justify-between">
+          <div className="flex font-lufga">
             Good Reps
             <br />
             Only
           </div>
 
-          <HomeMenuButton />
+          {user ? (
+            <HomeMenuButton />
+          ) : (
+            <div className="gap-2 flex">
+              {" "}
+              <button
+                className="flex items-center justify-center px-4 py-2 border border-[#323236] text-[#a0f000] text-base font-medium rounded-2xl"
+                onClick={() => navigate("/signup")}
+              >
+                Sign up
+              </button>
+              <button
+                className="flex items-center justify-center px-4 py-2 bg-[#fffef0] border text-[#000000] text-base font-medium rounded-2xl"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Log in
+              </button>
+            </div>
+          )}
         </div>
-        <div className="text-white flex">
-          {" "}
-          <button
-            className="border w-fit h-fit px-3 border-white rounded-full"
-            onClick={() => {
-              navigate("/signup");
-            }}
-          >
-            sign up
-          </button>
-          <button
-            className="border w-fit h-fit px-3 border-white rounded-full"
-            onClick={() => {
-              navigate("/login");
-            }}
-          >
-            log in
-          </button>
-        </div>
+
         <div className="flex text-white font-lufga font-medium text-3xl mt-10 self-center">
           <span>Track</span>
           <span className="text-red-600 mr-1">.</span>
@@ -71,116 +76,61 @@ function Home() {
         </div>
         <div className="flex flex-col gap-1">
           <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
+            color="bg-transparent"
             title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
+            textColor="text-[#fff]"
+            rounded="rounded-3xl"
             split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
+            splitTextColor="text-[#fff]"
+            heartBg="bg-[#242428]"
+            heartOut="text-[#a0f000]"
+            heartFill="#a0f000"
           />
           <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
+            color="bg-transparent"
             title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
+            textColor="text-[#fff]"
+            rounded="rounded-3xl"
             split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
+            splitTextColor="text-[#fff]"
+            heartBg="bg-[#242428]"
+            heartOut="text-[#a0f000]"
+            heartFill="#a0f000"
           />
           <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
+            color="bg-transparent"
             title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
+            textColor="text-[#fff]"
+            rounded="rounded-3xl"
             split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
+            splitTextColor="text-[#fff]"
+            heartBg="bg-[#242428]"
+            heartOut="text-[#a0f000]"
+            heartFill="#a0f000"
           />
           <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
+            color="bg-transparent"
             title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
+            textColor="text-[#fff]"
+            rounded="rounded-3xl"
             split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
+            splitTextColor="text-[#fff]"
+            heartBg="bg-[#242428]"
+            heartOut="text-[#a0f000]"
+            heartFill="#a0f000"
           />
           <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
+            color="bg-transparent"
             title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
+            textColor="text-[#fff]"
+            rounded="rounded-3xl"
             split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
-          />
-          <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
-            title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
-            split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
-          />
-          <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
-            title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
-            split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
-          />
-          <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
-            title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
-            split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
-          />
-          <CardRect
-            color="bg-[#F6EBC9]"
-            round="rounded-[3rem]"
-            title="7 Jan"
-            textColor="text-[#000]"
-            rounded="rounded-[3rem]"
-            split="PPL"
-            splitTextColor="text-[#6C6346]"
-            heartBg="bg-[#E0D5B3]"
-            heartOut="text-[#6C6346]"
-            heartFill="#6C6346"
+            splitTextColor="text-[#fff]"
+            heartBg="bg-[#242428]"
+            heartOut="text-[#a0f000]"
+            heartFill="#a0f000"
           />
         </div>
-        <MainAddButton />
-        <BottomNav />
       </div>
       <Footer />
     </>

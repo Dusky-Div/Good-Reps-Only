@@ -1,12 +1,22 @@
 import FourDots from "/assets/FourDots.svg";
 import { useState } from "react";
 import { X } from "lucide-react";
-
+import { getAuth, signOut } from "firebase/auth";
 const HomeMenuButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const auth = getAuth();
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("User signed out");
+        window.location.href = "/";
+      })
+
+      .catch((error) => console.error("Logout error", error));
   };
 
   return (
@@ -27,7 +37,13 @@ const HomeMenuButton = () => {
       {isOpen && (
         <div className="flex absolute flex-col text-lg gap-2 bg-lime-500 text-black h-40 w-40 top-16 right-0">
           <p>Hi User</p>
-          <button className="border w-fit h-fit px-3 border-black rounded-full">
+          <button
+            className="border w-fit h-fit px-3 border-black rounded-full"
+            onClick={() => {
+              handleLogout();
+              setIsOpen(false);
+            }}
+          >
             logout
           </button>
         </div>
