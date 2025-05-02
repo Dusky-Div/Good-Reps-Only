@@ -19,9 +19,7 @@ const CardLong = ({
   };
 
   return (
-    <div
-      className={`relative z-25 w-1/2 h-72 p-3 ${color} bg-[url(./assets/YellowCardSquiggle.svg)] ${rounded}`}
-    >
+    <div className={`relative z-25 w-1/2 h-72 p-3 ${color} ${rounded}`}>
       <CardOptionButton color="bg-[#202020]" />
       <div className="flex justify-between items-center mt-3">
         <div

@@ -1,12 +1,9 @@
 import CardLong from "../components/organisms/CardLong";
 import CardRect from "../components/organisms/CardRect";
-import MainAddButton from "../components/atoms/MainAddButton";
 import Footer from "../components/templates/Footer";
 import HomeMenuButton from "../components/atoms/HomeMenuButton";
-import BottomNav from "../components/organisms/BottomNav";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../firebase/AuthContext";
-import BottomNavigation from "@/components/organisms/BottomNavigation";
 function Home() {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -56,19 +53,19 @@ function Home() {
         </div>
         <div className="flex flex-row gap-1">
           <CardLong
-            color="bg-[#7678ed]"
+            color=" bg-[#e7e7e7]/10 backdrop-blur-lg border border-[#323236]"
             rounded="rounded-bl-[3rem] rounded-tr-[3rem] rounded-br-[3rem]"
             title="Today"
-            textColor="text-[#161635]"
-            heartBg="bg-[#6E70E4]"
-            heartOut="text-[#161635]"
-            heartFill="#161635"
+            textColor="text-[#fff]"
+            heartBg="bg-[#E8C748]"
+            heartOut="text-[#392E00]"
+            heartFill="#392E00"
           />
           <CardLong
-            color="bg-[#F7D44C]"
+            color=" bg-[#e7e7e7]/10 backdrop-blur-lg border border-[#323236]"
             rounded="rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem]"
             title="Yesterday"
-            textColor="text-[#392E00]"
+            textColor="text-[#fff]"
             heartBg="bg-[#E8C748]"
             heartOut="text-[#392E00]"
             heartFill="#392E00"

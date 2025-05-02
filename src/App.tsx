@@ -18,6 +18,7 @@ function App() {
           <Route path="/map" element={<Heatmap />} />
           <Route path="/log-pr" element={<LogPR />} />
         </Route>
+        ``
         {/* Here lie the remains of pages dat no hev botam nevigesyon */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />

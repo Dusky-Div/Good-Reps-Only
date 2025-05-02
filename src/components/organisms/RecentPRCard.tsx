@@ -15,7 +15,7 @@ const RecentPRCard = ({
   Reps,
 }: RecentPRCardProps): JSX.Element => {
   return (
-    <div className="flex flex-col gap-4 w-full h-fit px-5 py-4 bg-transparent border border-[#323236] text-white rounded-3xl">
+    <button className="flex text-left flex-col gap-4 w-full h-fit px-5 py-4 bg-transparent border border-[#323236] text-white rounded-3xl">
       <div className="flex justify-between">
         <div className="flex flex-col leading-4 w-2/3">
           <p className="font-lufga text-xl font-medium w-full text-wrap">
@@ -47,7 +47,7 @@ const RecentPRCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
